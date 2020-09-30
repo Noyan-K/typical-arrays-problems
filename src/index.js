@@ -1,6 +1,16 @@
 
 exports.min = function min (array) {
-  return 0;
+  if (array !== undefined && array.length !== 0) {
+    let min = array[0];
+    for (let i = 1; i < array.length; i++) {
+      if (min > array[i]) {
+        min = array[i];
+      }
+    }
+    return min;
+  } else {
+    return 0;
+  }
 }
 
 exports.max = function max (array) {
